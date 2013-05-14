@@ -18,7 +18,7 @@
 3. Responsive media
 4. Header
 5. Section: Featured
-6. Sliders
+6. Hero
 7. Intro
 8. Section: Content
 9. Section: Bottom
@@ -312,6 +312,11 @@ header ul.nav li a {
 	font-weight:300;
 	text-transform:uppercase;
 }
+
+.navbar.navbar-fixed-top {
+	background: #fff;
+}
+
 .navbar .nav > li > a {
   color: #111;
   text-shadow: none;
@@ -366,6 +371,10 @@ header ul.nav li ul li ul {
   content: '';
 }
 
+.navbar h3.contact {
+	text-align: right;
+	margin: 0 25px -10px 0;
+}
 
 ul.nav li.dropdown a {
 	z-index:1000;
@@ -388,8 +397,18 @@ ul.nav li.dropdown a {
 }
 
 /* ===================================
-6. Sliders
+6. Hero
 ==================================== */
+
+#featured {
+	width: 120%;
+	height: 550px;
+	overflow: hidden;
+}
+
+#featured img {
+	width: 100%;
+}
 
 /* --- slit slider --- */
 
