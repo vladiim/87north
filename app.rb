@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'cloudinary'
 
 Cloudinary.config do |config|
   config.cloud_name    = 'eightsevennorth'

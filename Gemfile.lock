@@ -27,6 +27,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  cloudinary
+  cloudinary (~> 1.0.57)
   sinatra (~> 1.4.2)
   thin (~> 1.5.1)
