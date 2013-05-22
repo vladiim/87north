@@ -19,8 +19,7 @@
 4. Header
 5. Hero
 6. Awards
-
-7. Intro
+7. About
 8. Section: Content
 9. Section: Bottom
 10. Inner - Section: page headline
@@ -36,6 +35,7 @@
 20. Spacer, margin
 21. Media queries 
 ==================================== */
+
 /* ===================================
 1. General
 ==================================== */
@@ -54,6 +54,10 @@ a:active {
 
 .clear {
 	clear:both;
+}
+
+.row.solidline {
+	margin-left: 20px;
 }
 
 /* ===================================
@@ -381,14 +385,16 @@ section.takeabreak h3 {
 }
 
 /* ===================================
-7. Section: call action
+7. About
 ==================================== */
-section.callaction {
-	background:#f9f9f9;
-	padding:50px 0 0 0;
-}
 
-
+//section#about article.feature img {
+//	-webkit-border-radius: 50em;
+//	-moz-border-radius: 50em;
+//	border-radius: 50em;
+//	height: 300px;
+//	width: 300px;
+//}
 
 /* ===================================
 8. Section: Content
