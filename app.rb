@@ -2,9 +2,9 @@ require 'sinatra'
 require 'cloudinary'
 
 Cloudinary.config do |config|
-  config.cloud_name    = 'eightsevennorth'
-  config.api_key       = '354586816237512'
-  config.api_secret    = 'M14l_3FNJgSOw6BBltrwTFsuV08'
+  config.cloud_name    = ENV['87_COUDINARY_CLOUD_NAME']
+  config.api_key       = ENV['87_CLOUDINARY_API_KEY']
+  config.api_secret    = ENV['87_CLOUDINARY_API_SECRET']
   config.cdn_subdomain = true
 end
 

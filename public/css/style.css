@@ -169,10 +169,14 @@ header .logo h1.logo span {
     font: 32px Arial, sans-serif
 }
 
+header .logo h1.logo a {
+	text-decoration: none;
+}
+
 header .logo h1.address {
 	font-size: 10px;
 	position: absolute;
-	margin: 30px 0 0 75px;
+	margin: 60px 0 0 75px;
 }
 
 /* --- menu --- */
