@@ -42,6 +42,6 @@ PLATFORMS
 
 DEPENDENCIES
   cloudinary (~> 1.0.57)
-  heroku
+  heroku (~> 2.39.3)
   sinatra (~> 1.4.2)
   thin (~> 1.5.1)

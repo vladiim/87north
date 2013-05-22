@@ -238,11 +238,19 @@ header ul.nav li ul li ul {
 	width: 100%;
 }
 
+.navigation li.tel {
+	display: none;
+}
+
 @media screen and (max-width: 765px) {
     header .logo {
     	text-align: center;
     	float: none;
     	margin: none;
+    }
+
+    header .logo h1.logo {
+    	margin-top: 100px;
     }
 
     header .logo h1.address {
@@ -274,6 +282,10 @@ header ul.nav li ul li ul {
 		display: none;
 	}
 
+	section.hero {
+		margin-top: 100px;
+	}
+
 	section.hero .usp {
 		width: 100%;
 		left: 0;
@@ -288,6 +300,11 @@ header ul.nav li ul li ul {
 
 	header .nav {
 		margin-top: 60px !important;
+	}
+
+	.navigation li.tel {
+		display: inline;
+
 	}
 }
 
