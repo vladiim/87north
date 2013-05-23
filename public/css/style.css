@@ -24,16 +24,17 @@
 9. Section: Bottom
 10. Inner - Section: page headline
 11. Forms
-12. Portfolio
-13. Elements
-14. Blog & article
-15. Aside, sidebar
-16. Footer
-17. Divider, Line & Misc
-18. Position & alignment
-19. More icon from custom font icon 
-20. Spacer, margin
-21. Media queries 
+12. Photos
+13. Rates
+14. Elements
+15. Blog & article
+16. Aside, sidebar
+17. Footer
+18. Divider, Line & Misc
+19. Position & alignment
+20. More icon from custom font icon 
+21. Spacer, margin
+22. Media queries 
 ==================================== */
 
 /* ===================================
@@ -42,7 +43,7 @@
 
 body {
 	font-family:'Open Sans', Arial, sans-serif;
-	font-size:14px;
+	font-size:16px;
 	font-weight:300;
 	line-height:1.6em;
 	color:#656565;
@@ -58,6 +59,10 @@ a:active {
 
 .row.solidline {
 	margin-left: 20px;
+}
+
+h1 {
+	margin-top: 30px; // this is to overcome fixed nav issue
 }
 
 /* ===================================
@@ -254,7 +259,7 @@ header ul.nav li ul li ul {
     }
 
     header .logo h1.logo {
-    	margin-top: 100px;
+    	margin-top: -15px;
     }
 
     header .logo h1.address {
@@ -266,7 +271,7 @@ header ul.nav li ul li ul {
     header .navigation {
 		float: left;
 		position: absolute;
-		margin: -75px 0 0 0;
+		margin: -45px 0 0 0;
 	}
 
     header .navbar {
@@ -303,13 +308,17 @@ header ul.nav li ul li ul {
 	}
 
 	header .nav {
-		margin-top: 60px !important;
+		margin-top: 40px !important;
 	}
 
 	.navigation li.tel {
 		display: inline;
-
+		margin: 9px 15px;
 	}
+
+    header .logo h1.logo {
+    	margin-top: -30px;
+    }
 }
 
 /* ===================================
@@ -330,7 +339,7 @@ header ul.nav li ul li ul {
 
 .hero .usp {
 	position: absolute;
-	top: 75px;
+	top: 95px;
 	left: 25px;
     background: rgba(0,0,0,0.8);
 	color:#fff;
@@ -345,12 +354,13 @@ header ul.nav li ul li ul {
 
 .hero .usp h2 {
 	color:#fff;
-	font-size:26px;
+	font-size:22px;
 	line-height:1em;
 }
 
 .hero .usp p {
 	margin-bottom:20px;
+	font-size: 14px;
 }
 
 .hero .usp a {
@@ -478,9 +488,16 @@ section.takeabreak h3 {
 }
 
 
+
 /* ===================================
 10. Inner - Section: page headline
 ==================================== */
+
+
+
+/*
+
+
 
 #inner-headline{
 	background:#252525;
@@ -497,6 +514,11 @@ section.takeabreak h3 {
 }
 
 /* --- breadcrumbs --- */
+
+/*
+
+
+
 #inner-headline ul.breadcrumb {
 	margin:30px 0 0;
 	float:right;
@@ -620,7 +642,7 @@ form#commentform textarea {
 
 
 /* ===============================
-12. Portfolio
+12. Photos
 ================================ */
 
 .work-nav #filters {
@@ -757,6 +779,18 @@ ul.portfolio-categ li.active a:hover, ul.portfolio-categ li a:hover,ul.portfolio
 /* --- portfolio detail --- */
 .top-wrapper {
 	margin-bottom:20px;
+}
+
+/* ===================================
+13. Rates
+==================================== */
+
+table#rates {
+	text-align: left;
+}
+
+table#rates td {
+	padding: 15px 25px 15px 0;
 }
 
 /* ===============================
@@ -1002,7 +1036,6 @@ ul.team-detail li ul.social-network li i {
 }
 
 /* --- Pricing box --- */
-
 
 .pricing-title{
 	background:#fff;
@@ -2444,37 +2477,6 @@ article img.pull-right, article .align-right{
 	border:1px solid #e6e6e6;
 }
 
-.bgr .bg.bg1 {
-	background: url(../img/bodybg/bg1.png) repeat left top;
-}	
-.bgr .bg.bg2 {
-	background: url(../img/bodybg/bg2.png) repeat left top;
-}	
-.bgr .bg.bg3 {
-	background: url(../img/bodybg/bg3.jpg) repeat left top;
-}	
-.bgr .bg.bg4 {
-	background: url(../img/bodybg/bg4.png) repeat left top;
-}	
-.bgr .bg.bg5 {
-	background: url(../img/bodybg/bg5.png) repeat left top;
-}	
-.bgr .bg.bg6 {
-	background: url(../img/bodybg/bg6.png) repeat left top;
-}	
-.bgr .bg.bg7 {
-	background: url(../img/bodybg/bg7.png) repeat left top;
-}	
-.bgr .bg.bg8 {
-	background: url(../img/bodybg/bg8.jpg) repeat left top;
-}	
-.bgr .bg.bg9 {
-	background: url(../img/bodybg/bg9.png) repeat left top;
-}	
-.bgr .bg.bg10 {
-	background: url(../img/bodybg/bg10.png) repeat left top;
-}	
-
 #accent_color{
 	color: #fff;
 	background: #ef5523;
@@ -2494,7 +2496,3 @@ article img.pull-right, article .align-right{
 	text-align: center;
 	outline:0;
 }
-
-
-
-/* Theme Styler :: End */
