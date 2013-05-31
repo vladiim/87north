@@ -693,6 +693,28 @@ form#commentform textarea {
 	width: 200px;
 }
 
+#totalcost {
+	margin: 0 85px -25px 0;
+	font-size: 200%;
+}
+
+input.ng-invalid.ng-dirty {
+	color: #db2929;
+}
+
+input.ng-valid.ng-dirty {
+	color: #458B00;
+}
+
+.validation-error {
+	margin: -15px 0 10px -20px;
+}
+
+.validation-error span {
+	font-size: 80%;
+	color: #DB2929;
+}
+
 /* ===============================
 12. Photos
 ================================ */
@@ -798,6 +820,10 @@ form#commentform textarea {
 
 #booking-form-button {
 	width: 200px;
+}
+
+#booking-input input {
+	margin-left: -20px;
 }
 
 /* --- Portolio filter --- */
