@@ -17,15 +17,11 @@ jQuery(document).ready(function($) {
 
 });
 
-/* datepicker */
-
-$(function() {
-	$( "#datepicker" ).datepicker({ dateFormat: "dd/mm/yy" });
-});
-
 /* Angular js */
 
-function Ctrl($scope) {
+var app = angular.module('87north', ['ui.directives']);
+
+app.controller('Ctrl', function($scope) {
     MINIMUM_NIGHTS    = 3;
     WINTER_NIGHT_COST = 220;
     WINTER_WEEK_COST  = 1120;
@@ -33,23 +29,31 @@ function Ctrl($scope) {
     SPRING_WEEK_COST  = 1330;
     SUMMER_WEEK_COST  = 1890;
 
-	$scope.night_count = MINIMUM_NIGHTS;
-	$scope.user = {};
-	$scope.user = { startdate: new Date() };
-    $scope.user.cost = $scope.night_count * 220;
+	$scope.user        = {};
+	$scope.user.nights = MINIMUM_NIGHTS;
+    // $scope.user.cost   = $scope.user.nights * 220;
 
 	$scope.addNight = function() {
-		$scope.night_count  = $scope.night_count + 1;
+		$scope.user.nights  = $scope.user.nights + 1;
 		$scope.changeCost();
 	}
 
 	$scope.minusNight = function() {
-		if ($scope.night_count > MINIMUM_NIGHTS) {
-			$scope.night_count = $scope.night_count - 1;
+		if ($scope.user.nights > MINIMUM_NIGHTS) {
+			$scope.user.nights = $scope.user.nights - 1;
+			$scope.changeCost();
 		}
 	}
 
 	$scope.changeCost = function() {
-		$scope.user.cost = $scope.night_count * 220;
+		$scope.user.cost = $scope.user.nights * WINTER_NIGHT_COST;
 	}
-}
+
+	$scope.sendBooking = function() {
+		$.ajax({
+			type: "POST",
+			url: "/bookings",
+			data: $scope.user
+		})
+	}
+});

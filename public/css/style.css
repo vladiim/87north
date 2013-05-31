@@ -671,7 +671,7 @@ form#commentform textarea {
 	margin: -47px 0 0 40px;
 }
 
-#nights .total {
+p.big-form-value {
 	margin: -33px 0 0 95px;
 	font-size: 200%;
 }
@@ -690,7 +690,7 @@ form#commentform textarea {
 }
 
 #startdate input {
-	width: 200px;
+	width: 70px;
 }
 
 #totalcost {
@@ -713,6 +713,14 @@ input.ng-valid.ng-dirty {
 .validation-error span {
 	font-size: 80%;
 	color: #DB2929;
+}
+
+primary[disabled].formbutton {
+	background: #cdcdcd;
+}
+
+primary[disabled].formbutton:hover {
+	background: #cdcdcd !important;	
 }
 
 /* ===============================

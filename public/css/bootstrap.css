@@ -3359,12 +3359,10 @@ input[type="button"].btn-block {
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
 
-.btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active,
 .btn-primary.active,
-.btn-primary.disabled,
-.btn-primary[disabled] {
+.btn-primary.disabled {
   color: #ffffff;
   background-color: #0044cc;
   *background-color: #003bb3;
