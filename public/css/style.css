@@ -723,6 +723,11 @@ primary[disabled].formbutton:hover {
 	background: #cdcdcd !important;	
 }
 
+.booking-sent {
+	background: rgba(152,251,152,0.7);
+	padding: 0.5em;
+}
+
 /* ===============================
 12. Photos
 ================================ */

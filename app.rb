@@ -33,7 +33,7 @@ class BookingCreator
       # to: 'evagreg7@gmail.com',
       to: 'vladiim@yahoo.com.au',
       subject: "New 87north Booking!",
-      body: "Firstname: #{user[:firstname]}\n
+      body: "\n Firstname: #{user[:firstname]}\n
              Lastname: #{user[:lastname]}\n
              Email: #{user[:email]}\n
              Number: #{user[:phonenumber]}\n

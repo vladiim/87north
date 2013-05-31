@@ -314,10 +314,10 @@
 
   		<div class="modal-body">
   		  	<form name="userform" ng-controller="Ctrl">
-  		  		<h5>Booking details</h5>
+  		  		<h5  ng-hide="bookingSent">Booking details</h5>
   		  		<div class="row">
   		  			<div class="span8">
-		  		  		<div class="span3" id="booking-input">
+		  		  		<div class="span3" id="booking-input" ng-hide="bookingSent">
 		  		  			<input type="text" placeholder="First name" ng-model="user.firstname" name="uFirstname" required>
 					        <div ng-show="userform.uFirstname.$invalid" class='validation-error'>
 					          <span ng-show="userform.uFirstname.$error.required">What's your first name?</span>
@@ -340,7 +340,7 @@
 					        </div>
 		  		  		</div>
 
-		  		  		<div class="span3">
+		  		  		<div class="span3" ng-hide="bookingSent">
 		  		  			<div id="nights">
 		  		  				<p class="operator" ng-click="addNight()">+</p>
 		  		  				<p class="operator minus" ng-click="minusNight()">-</p>
@@ -349,7 +349,7 @@
 		  		  		</div>
 
 		  		  		<div class="span3">
-		  		  			<div id="startdate">
+		  		  			<div id="startdate" ng-hide="bookingSent">
 		  		  				<input ng-model="user.startdate" ui-date required>
 		  		  				<p class="big-form-value">Night 1</p>
 		  		  			</div>
@@ -357,7 +357,12 @@
   		  			</div>
   		  		</div>
 
-		  		<div class="modal-footer">
+  		  		<div class="booking-sent" ng-show="bookingSent">
+  		  			<p>Thanks {{user.firstname}} your booking was sent!</p>
+  		  			<p>We'll be in touch soon, Greg.</p>
+  		  		</div>
+
+		  		<div class="modal-footer" ng-hide="bookingSent">
 		  			<!-- <p id="totalcost">Total: ${{user.cost}}</p> -->
 		  		  	<button class="btn btn-primary formbutton" ng-disabled="!userform.$valid" ng-click="sendBooking()">Book</button>
 		  		</div>
@@ -387,7 +392,7 @@
 				<div class="span6">
 					<div class="copyright">
 						<p>
-							<span>&copy; 87north 2013 All right reserved.</span>
+							<span>&copy; 87north 2013; All rights reserved.</span>
 						</p>
 					</div>
 				</div>

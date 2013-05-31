@@ -29,6 +29,8 @@ app.controller('Ctrl', function($scope) {
     SPRING_WEEK_COST  = 1330;
     SUMMER_WEEK_COST  = 1890;
 
+    $scope.bookingSent = false;
+
 	$scope.user        = {};
 	$scope.user.nights = MINIMUM_NIGHTS;
     // $scope.user.cost   = $scope.user.nights * 220;
@@ -50,6 +52,8 @@ app.controller('Ctrl', function($scope) {
 	}
 
 	$scope.sendBooking = function() {
+		$scope.bookingSent = true;
+
 		$.ajax({
 			type: "POST",
 			url: "/bookings",
