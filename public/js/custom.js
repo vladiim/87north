@@ -1,4 +1,5 @@
 /*global jQuery:false */
+
 jQuery(document).ready(function($) {
 "use strict";
 
@@ -17,23 +18,15 @@ jQuery(document).ready(function($) {
 
 });
 
-/* Angular js */
+/* Angular js app */
 
 var app = angular.module('87north', ['ui.directives']);
 
 app.controller('Ctrl', function($scope) {
-    MINIMUM_NIGHTS    = 3;
-    WINTER_NIGHT_COST = 220;
-    WINTER_WEEK_COST  = 1120;
-    SPRING_NIGHT_COST = 245;
-    SPRING_WEEK_COST  = 1330;
-    SUMMER_WEEK_COST  = 1890;
-
-    $scope.bookingSent = false;
-
+    MINIMUM_NIGHTS     = 2;
 	$scope.user        = {};
 	$scope.user.nights = MINIMUM_NIGHTS;
-    // $scope.user.cost   = $scope.user.nights * 220;
+    $scope.bookingSent = false;
 
 	$scope.addNight = function() {
 		$scope.user.nights  = $scope.user.nights + 1;
@@ -45,10 +38,6 @@ app.controller('Ctrl', function($scope) {
 			$scope.user.nights = $scope.user.nights - 1;
 			$scope.changeCost();
 		}
-	}
-
-	$scope.changeCost = function() {
-		$scope.user.cost = $scope.user.nights * WINTER_NIGHT_COST;
 	}
 
 	$scope.sendBooking = function() {

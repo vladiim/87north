@@ -1,10 +1,5 @@
 # Images uploaded to Cloudinary
 
-```
-def	upload(filename)
-   Cloudinary::Uploader.upload("#{Dir.pwd}/public/images/#{filename}")
-end
-```
 
 ## approach.jpg
 http://res.cloudinary.com/eightsevennorth/image/upload/v1370644889/sahfob2qkltpytth5tfi.jpg
