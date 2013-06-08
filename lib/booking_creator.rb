@@ -7,10 +7,10 @@ class BookingCreator
 
   def send_booking!
     Pony.mail({
-      to: 'evagreg7@gmail.com',
-      # to: 'vladiim@yahoo.com.au',
+      # to: 'evagreg7@gmail.com',
+      to: 'vladiim@yahoo.com.au',
       subject: "New 87north Booking!",
-      body: "\n Firstname: #{user[:firstname]}\n
+      body: "\t Firstname: #{user[:firstname]}\n
              Lastname: #{user[:lastname]}\n
              Email: #{user[:email]}\n
              Number: #{user[:phonenumber]}\n

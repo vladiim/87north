@@ -59,7 +59,7 @@ PLATFORMS
 
 DEPENDENCIES
   cloudinary (~> 1.0.57)
-  debugger
+  debugger (~> 1.6.0)
   heroku (~> 2.39.3)
   json (~> 1.7.7)
   pony (~> 1.4.1)

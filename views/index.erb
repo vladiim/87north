@@ -7,6 +7,8 @@
 <meta name="description" content="" />
 <meta name="author" content="" />
 <!-- css -->
+<!-- <link href="/css/87north.min.css" rel="stylesheet" /> -->
+
 <link href="/css/bootstrap.css" rel="stylesheet" />
 <link href="/css/bootstrap-responsive.css" rel="stylesheet" />
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/angular-ui/0.4.0/angular-ui.css">
@@ -15,8 +17,8 @@
 <link href="/css/jcarousel.css" rel="stylesheet" />
 <link href="/css/flexslider.css" rel="stylesheet" />
 <link href="/css/style.css" rel="stylesheet" />
-<!-- Theme skin -->
 <link id="t-colors" href="/css/default.css" rel="stylesheet" />
+
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -27,6 +29,32 @@
 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png" />
 <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png" />
 <link rel="shortcut icon" href="ico/favicon.png" />
+
+// <script>
+//   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+//   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+//   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+//   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+//   ga('create', 'UA-41564881-1', '87north.com.au');
+//   ga('send', 'pageview');
+
+// </script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-41564881-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
 </head>
 <body>
 <div id="wrapper">
@@ -38,21 +66,21 @@
 				<div class="navbar navbar-fixed-top">
 				<div>
 					<div class="logo">
-						<h1 class='logo'><a href="#"><span>87</span>north</h1></a>
+						<h1 class='logo'><a href="#" onClick="_gaq.push(['_trackEvent', 'Navigation', 'Home']);"><span>87</span>north</h1></a>
 						<br />
 						<h1 class='address'><a href='https://maps.google.com/maps?q=87+northcove+road+long+beach&um=1&ie=UTF-8&sa=X&ei=wROSUfjuDqWiigf94YGwBA&ved=0CAsQ_AUoAg' target=_blank>87 Northcove Rd, Long Beach</a></h1>
 					</div>
 				</div>
 					<div>
-						<p class='contact'><strong class='phone'>Phone</strong> <span class='tel'>04488484</span></p>
+						<p class='contact'><strong class='phone'>Phone</strong> <span class='tel'>0442513010</span></p>
 					</div>
 					<div class="navigation">
 						<nav>
 						<ul class="nav topnav">
-							<li><a href="#about">About</a></li>
-							<li><a href="#photos">Photos</a></li>
-							<li><a href="#book">Book</a></li>
-							<li class='tel'>04488484</li>
+							<li><a href="#about" onClick="_gaq.push(['_trackEvent', 'Navigation', 'About']);">About</a></li>
+							<li><a href="#photos" onClick="_gaq.push(['_trackEvent', 'Navigation', 'Photos']);">Photos</a></li>
+							<li><a href="#book" onClick="_gaq.push(['_trackEvent', 'Navigation', 'Book']);">Book</a></li>
+							<li class='tel' onClick="_gaq.push(['_trackEvent', 'Navigation', 'CallPhoneFromMobile']);">0442513010</li>
 						</ul>
 						</nav>
 					</div>
@@ -153,7 +181,7 @@
 						<li class="item-thumbs span3 design" data-id="id-0" data-type="web">
 						<!-- Fancybox - Gallery Enabled - Title - Full Image -->
 						<strong>Great location</strong>
-						<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Great location" href=<%= @images.beach %>>
+						<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Great location" href=<%= @images.beach %> onClick="_gaq.push(['_trackEvent', 'ImageGallery', 'View', 'Beach']);">
 						<span class="overlay-img"></span>
 						<span class="overlay-img-thumb font-icon-plus"></span>
 						</a>
@@ -166,7 +194,7 @@
 						<li class="item-thumbs span3 design" data-id="id-1" data-type="web">
 						<!-- Fancybox - Gallery Enabled - Title - Full Image -->
 						<strong>Sleeps 8</strong>
-						<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Sleeps 8" href=<%= @images.bedroom %>>
+						<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Sleeps 8" href=<%= @images.bedroom %> onClick="_gaq.push(['_trackEvent', 'ImageGallery', 'View', 'Bedroom']);">
 						<span class="overlay-img"></span>
 						<span class="overlay-img-thumb font-icon-plus"></span>
 						</a>
@@ -179,7 +207,7 @@
 						<li class="item-thumbs span3 design" data-id="id-2" data-type="web">
 						<!-- Fancybox - Gallery Enabled - Title - Full Image -->
 						<strong>Spacious deck</strong>
-						<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Spacious deck" href=<%= @images.deck %>>
+						<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Spacious deck" href=<%= @images.deck %> onClick="_gaq.push(['_trackEvent', 'ImageGallery', 'View', 'Deck']);">
 						<span class="overlay-img"></span>
 						<span class="overlay-img-thumb font-icon-plus"></span>
 						</a>
@@ -192,7 +220,7 @@
 						<li class="item-thumbs span3 design" data-id="id-3" data-type="web">
 						<!-- Fancybox - Gallery Enabled - Title - Full Image -->
 						<strong>Mod-cons</strong>
-						<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Mod-cons" href=<%= @images.kitchen %>>
+						<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Mod-cons" href=<%= @images.kitchen %>  onClick="_gaq.push(['_trackEvent', 'ImageGallery', 'View', 'Kitchen']);">
 						<span class="overlay-img"></span>
 						<span class="overlay-img-thumb font-icon-plus"></span>
 						</a>
@@ -205,7 +233,7 @@
 						<li class="item-thumbs span3 design" data-id="id-4" data-type="web">
 						<!-- Fancybox - Gallery Enabled - Title - Full Image -->
 						<strong>Entertainment</strong>
-						<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="In-door entertainment" href=<%= @images.living %>>
+						<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="In-door entertainment" href=<%= @images.living %> onClick="_gaq.push(['_trackEvent', 'ImageGallery', 'View', 'LivingRoom']);">
 						<span class="overlay-img"></span>
 						<span class="overlay-img-thumb font-icon-plus"></span>
 						</a>
@@ -218,7 +246,7 @@
 						<li class="item-thumbs span3 design" data-id="id-5" data-type="web">
 						<!-- Fancybox - Gallery Enabled - Title - Full Image -->
 						<strong>Out-door dining</strong>
-						<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Out-door dining" href=<%= @images.outdoor_dining %>>
+						<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Out-door dining" href=<%= @images.outdoor_dining %> onClick="_gaq.push(['_trackEvent', 'ImageGallery', 'View', 'OutdoorDining']);">
 						<span class="overlay-img"></span>
 						<span class="overlay-img-thumb font-icon-plus"></span>
 						</a>
@@ -231,7 +259,7 @@
 						<li class="item-thumbs span3 design" data-id="id-6" data-type="web">
 						<!-- Fancybox - Gallery Enabled - Title - Full Image -->
 						<strong>Book nook</strong>
-						<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Book nook" href=<%= @images.recliner %>>
+						<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Book nook" href=<%= @images.recliner %> onClick="_gaq.push(['_trackEvent', 'ImageGallery', 'View', 'BookNook']);">
 						<span class="overlay-img"></span>
 						<span class="overlay-img-thumb font-icon-plus"></span>
 						</a>
@@ -244,7 +272,7 @@
 						<li class="item-thumbs span3 design" data-id="id-6" data-type="web">
 						<!-- Fancybox - Gallery Enabled - Title - Full Image -->
 						<strong>Hide-away</strong>
-						<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Hide-away" href=<%= @images.approach %>>
+						<a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Hide-away" href=<%= @images.approach %> onClick="_gaq.push(['_trackEvent', 'ImageGallery', 'View', 'Approach']);">
 						<span class="overlay-img"></span>
 						<span class="overlay-img-thumb font-icon-plus"></span>
 						</a>
@@ -338,7 +366,7 @@
 						</tr>
 					</tbody>
 				</table>
-				<a id="booking-form-button" href="#bookingForm" role="button" class="btn btn-medium btn-theme" data-toggle="modal">Book</a>
+				<a id="booking-form-button" href="#bookingForm" role="button" class="btn btn-medium btn-theme" data-toggle="modal" onClick="_gaq.push(['_trackEvent', 'BookingForm', 'View', 'ClickLink']);">Book</a>
 			</div>
 		</div>
 	</section>
@@ -442,17 +470,17 @@
 	</footer>
 </div>
 
-<!-- javascript
-    ================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui/0.4.0/angular-ui.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<!-- javascript =========================== -->
+<script src="js/87north.min.js"></script>
+
+<!-- <script src="http://code.jquery.com/jquery-1.9.1.js"></script> -->
+<!-- <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script> -->
+<!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui/0.4.0/angular-ui.min.js"></script> -->
+<!-- <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.fancybox.pack.js"></script>
 <script src="js/jquery.fancybox-media.js"></script>
 <script src="js/modernizr.custom.79639.js"></script>
-<script src="js/custom.js"></script>
+<script src="js/custom.js"></script> -->
 </body>
 </html>

@@ -43,6 +43,8 @@ app.controller('Ctrl', function($scope) {
 	$scope.sendBooking = function() {
 		$scope.bookingSent = true;
 
+		_gaq.push(['_trackEvent', 'BookingForm', 'BookingCompleted']);
+
 		$.ajax({
 			type: "POST",
 			url: "/bookings",
