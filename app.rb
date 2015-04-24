@@ -2,7 +2,7 @@ require 'sinatra'
 require 'cloudinary'
 require 'json'
 require 'pony'
-require 'debugger'
+
 Dir["#{Dir.pwd}/lib/*.rb"].each { |file| require file }
 
 get '/' do
