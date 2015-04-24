@@ -24,7 +24,7 @@ class BookingCreator
       	user_name: ENV["GMAIL_USERNAME_87NORTH"],
       	password: ENV["GMAIL_PASSWORD_87NORTH"],
       	authentication: :plain,
-      	domain: 'localhost:9292'
+      	domain: 'http://www.87north.com.au/'
       }
     })
   end
